@@ -411,3 +411,50 @@ input:focus, textarea:focus{
   .gallery{ grid-template-columns: 1fr; }
   .stats{ grid-template-columns: 1fr; }
 }
+/* ===== Popup (Success) ===== */
+.popup-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 1000;
+}
+
+.popup-backdrop.show{ display:flex; }
+
+.popup{
+  width: min(520px, 92vw);
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 24px 70px rgba(0,0,0,.22);
+  text-align: center;
+  animation: popIn .18s ease-out;
+}
+
+.popup h3{ margin: 10px 0 6px; }
+.popup p{ margin: 0 0 14px; color: #6b7280; line-height: 1.6; }
+
+.popup-icon{
+  width: 54px;
+  height: 54px;
+  margin: 0 auto;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(37, 211, 102, .12);
+  color: #25D366;
+  font-weight: 900;
+  font-size: 22px;
+  border: 1px solid rgba(37, 211, 102, .25);
+}
+
+@keyframes popIn{
+  from{ transform: translateY(6px); opacity: .6; }
+  to{ transform: translateY(0); opacity: 1; }
+}

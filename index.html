@@ -235,7 +235,7 @@
           </div>
 
           <!-- Netlify Form -->
-          <form class="card" name="enquiry" method="POST" data-netlify="true">
+          <form class="card" id="enquiryForm" name="enquiry" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="enquiry" />
 
             <label>Nama
@@ -280,5 +280,13 @@
      class="wa-float" target="_blank" aria-label="WhatsApp Mahligai Cinta">
     <span class="wa-dot">●</span> WhatsApp
   </a>
-</body>
+<!-- Success Popup -->
+<div class="popup-backdrop" id="popupBackdrop" aria-hidden="true">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-icon">✓</div>
+    <h3 id="popupTitle">Terima kasih!</h3>
+    <p>Enquiry anda dah diterima. Team kami akan hubungi anda secepat mungkin.</p>
+    <button class="btn ghost" type="button" id="popupClose">Tutup</button>
+  </div>
+</div></body>
 </html>

@@ -9,6 +9,7 @@
   <meta name="keywords" content="Mahligai Cinta Event Hall, dewan kahwin, event hall, wedding hall, johor, tunang, aqiqah, korporat" />
   <meta name="author" content="Mahligai Cinta Event Hall" />
 
+  <!-- Social preview -->
   <meta property="og:title" content="Mahligai Cinta Event Hall" />
   <meta property="og:description" content="Dewan eksklusif untuk majlis perkahwinan, tunang, aqiqah & event korporat. WhatsApp 019-720 5373." />
   <meta property="og:type" content="website" />
@@ -181,7 +182,26 @@
             </a>
 
             <div class="spacer"></div>
-            <p class="muted small">Tip: Waktu Operasi (8am - 10pm).</p>
+
+            <h3>Sosial</h3>
+            <p class="muted small">Follow untuk video dewan & update promo.</p>
+
+            <div class="links">
+              <a target="_blank" rel="noopener"
+                 href="https://www.instagram.com/mahligaicintaeventhall/"
+                 aria-label="Instagram Mahligai Cinta Event Hall">
+                Instagram: @mahligaicintaeventhall
+              </a>
+
+              <a target="_blank" rel="noopener"
+                 href="https://www.tiktok.com/@mahligaicintaeventhall"
+                 aria-label="TikTok Mahligai Cinta Event Hall">
+                TikTok: @mahligaicintaeventhall
+              </a>
+            </div>
+
+            <div class="spacer"></div>
+            <p class="muted small">Tip: Kalau Bro ada waktu operasi, letak dekat sini (contoh: 10am–6pm).</p>
           </div>
 
           <div class="map card" style="padding:0; overflow:hidden;">
@@ -200,7 +220,7 @@
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Tempahan / Enquiry</h2>
-        <p class="muted">Untuk sebarang pertanyaan, sila klik button whatsapp dibawah atau isi boran enquiry.</p>
+        <p class="muted">Cara paling cepat: WhatsApp terus. Borang bawah untuk enquiry ringkas.</p>
 
         <div class="grid-2">
           <div class="card">
@@ -215,11 +235,18 @@
             <div class="spacer"></div>
 
             <h3>Sosial</h3>
-            <p class="muted small">Isi link sebenar bila ready.</p>
+            <p class="muted small">Follow untuk video dewan & update promo.</p>
             <div class="links">
-              <https://www.instagram.com/mahligaicintaeventhall/?hl=en</a>
-              <https://www.tiktok.com/@mahligaicintaeventhall>TikTok</a>
-              <a target="_blank" rel="noopener" href="#">Facebook</a>
+              <a target="_blank" rel="noopener"
+                 href="https://www.instagram.com/mahligaicintaeventhall/"
+                 aria-label="Instagram Mahligai Cinta Event Hall">
+                Instagram: @mahligaicintaeventhall
+              </a>
+              <a target="_blank" rel="noopener"
+                 href="https://www.tiktok.com/@mahligaicintaeventhall"
+                 aria-label="TikTok Mahligai Cinta Event Hall">
+                TikTok: @mahligaicintaeventhall
+              </a>
             </div>
           </div>
 
@@ -280,7 +307,7 @@
     <span class="wa-dot">●</span> WhatsApp
   </a>
 
-  <!-- Success Popup (boleh trigger dari thanks.html atau querystring) -->
+  <!-- Success Popup (optional) -->
   <div class="popup-backdrop" id="popupBackdrop" aria-hidden="true">
     <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
       <div class="popup-icon">✓</div>
@@ -290,6 +317,56 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- INLINE SCRIPT (tak perlu script.js) -->
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      // Close menu bila klik link
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Popup controls
+    const popupBackdrop = document.getElementById("popupBackdrop");
+    const popupClose = document.getElementById("popupClose");
+
+    function openPopup() {
+      if (!popupBackdrop) return;
+      popupBackdrop.classList.add("show");
+      popupBackdrop.setAttribute("aria-hidden", "false");
+    }
+
+    function closePopup() {
+      if (!popupBackdrop) return;
+      popupBackdrop.classList.remove("show");
+      popupBackdrop.setAttribute("aria-hidden", "true");
+    }
+
+    if (popupClose) popupClose.addEventListener("click", closePopup);
+    if (popupBackdrop) {
+      popupBackdrop.addEventListener("click", (e) => {
+        if (e.target === popupBackdrop) closePopup();
+      });
+    }
+
+    // Trigger popup jika URL ada ?success=1 (optional)
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "1") openPopup();
+  </script>
 </body>
 </html>

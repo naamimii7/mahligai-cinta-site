@@ -1,48 +1,59 @@
-// Year
-document.getElementById("year").textContent = new Date().getFullYear();
+/* =========================================
+   Mahligai Cinta Event Hall — FULL script.js
+   - Auto add IG + TikTok
+   - Popup success
+   - Footer year
+========================================= */
 
-// Mobile menu toggle
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.toggle("open");
-    hamburger.setAttribute("aria-expanded", String(isOpen));
-  });
+  // ================= SOCIAL LINKS =================
+  const IG = "https://www.instagram.com/mahligaicintaeventhall";
+  const TT = "https://www.tiktok.com/@mahligaicintaeventhall";
 
-  // Close menu bila klik link
-  mobileMenu.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-      hamburger.setAttribute("aria-expanded", "false");
-    });
-  });
-}
+  const menu = document.querySelector(".menu");
 
-// Popup controls
-const popupBackdrop = document.getElementById("popupBackdrop");
-const popupClose = document.getElementById("popupClose");
+  if (menu) {
+    const socials = document.createElement("div");
+    socials.style.display = "flex";
+    socials.style.gap = "10px";
+    socials.style.marginLeft = "10px";
 
-function openPopup() {
-  if (!popupBackdrop) return;
-  popupBackdrop.classList.add("show");
-  popupBackdrop.setAttribute("aria-hidden", "false");
-}
+    socials.innerHTML = `
+      <a href="${IG}" target="_blank" style="font-weight:600;color:#b8975b">IG</a>
+      <a href="${TT}" target="_blank" style="font-weight:600;color:#b8975b">TikTok</a>
+    `;
 
-function closePopup() {
-  if (!popupBackdrop) return;
-  popupBackdrop.classList.remove("show");
-  popupBackdrop.setAttribute("aria-hidden", "true");
-}
+    menu.appendChild(socials);
+  }
 
-if (popupClose) popupClose.addEventListener("click", closePopup);
-if (popupBackdrop) {
-  popupBackdrop.addEventListener("click", (e) => {
-    if (e.target === popupBackdrop) closePopup();
-  });
-}
+  // ================= FOOTER YEAR =================
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
 
-// Trigger popup jika URL ada ?success=1
-const params = new URLSearchParams(window.location.search);
-if (params.get("success") === "1") openPopup();
+  // ================= POPUP =================
+  const popup = document.getElementById("popupBackdrop");
+  const closeBtn = document.getElementById("popupClose");
+
+  function showPopup() {
+    if (!popup) return;
+    popup.classList.add("show");
+  }
+
+  function hidePopup() {
+    if (!popup) return;
+    popup.classList.remove("show");
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", hidePopup);
+
+  // ================= SUCCESS FLAG =================
+  const flag = localStorage.getItem("mc_enquiry_success");
+
+  if (flag === "1") {
+    localStorage.removeItem("mc_enquiry_success");
+    showPopup();
+    setTimeout(hidePopup, 4000);
+  }
+
+});

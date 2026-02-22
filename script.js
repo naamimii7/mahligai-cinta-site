@@ -29,16 +29,20 @@ if (form) {
     try {
       const formData = new FormData(form);
 
+      // Encode
       const params = new URLSearchParams();
       for (const [key, value] of formData.entries()) params.append(key, value);
 
       const res = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        },
         body: params.toString(),
       });
 
-      if (res.ok) {
+      // Netlify kadang return 200/201/302 — kita anggap semua OK kecuali 4xx/5xx
+      if (res.status >= 200 && res.status < 400) {
         form.reset();
         showPopup();
         setTimeout(hidePopup, 4000);

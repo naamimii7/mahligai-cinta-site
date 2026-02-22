@@ -3,174 +3,294 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahligai Cinta Event Hall</title>
-  <meta name="description" content="Dewan eksklusif untuk wedding, tunang, aqiqah dan event korporat di Johor." />
+  <title>Mahligai Cinta Event Hall | Dewan Kahwin & Event</title>
+
+  <meta name="description" content="Mahligai Cinta Event Hall — dewan eksklusif untuk majlis perkahwinan, tunang, aqiqah & event korporat. WhatsApp 019-720 5373 untuk semak tarikh & pakej." />
+  <meta name="keywords" content="Mahligai Cinta Event Hall, dewan kahwin, event hall, wedding hall, johor, tunang, aqiqah, korporat" />
+  <meta name="author" content="Mahligai Cinta Event Hall" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Mahligai Cinta Event Hall" />
+  <meta property="og:description" content="Dewan eksklusif untuk majlis perkahwinan, tunang, aqiqah & event korporat. WhatsApp 019-720 5373." />
+  <meta property="og:type" content="website" />
+  <!-- Optional: kalau ada poster/hero khas untuk share, letak file contoh assets/og.jpg -->
+  <!-- <meta property="og:image" content="https://mahligaicintaeventhall.com/assets/og.jpg" /> -->
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-  <div class="container nav">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Mahligai Cinta Logo" height="50">
-      <span>Mahligai Cinta</span>
+<body id="top">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Mahligai Cinta Event Hall">
+        <img src="assets/logo.png" alt="Mahligai Cinta" class="logo" />
+        <span>Mahligai Cinta</span>
+      </a>
+
+      <nav class="menu">
+        <a href="#pakej">Pakej</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#contact" class="btn">Tempah</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
 
-    <nav class="menu">
+    <div class="mobile-menu" id="mobileMenu">
       <a href="#pakej">Pakej</a>
       <a href="#gallery">Gallery</a>
       <a href="#lokasi">Lokasi</a>
-      <a href="#contact" class="btn-primary">Tempah</a>
-    </nav>
-  </div>
-</header>
-
-
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="badge">Wedding · Tunang · Aqiqah · Corporate</div>
-      <h1>Mahligai Cinta Event Hall</h1>
-      <p>
-        Dewan eksklusif yang selesa dan kemas — sesuai untuk majlis impian anda.
-        Semak tarikh available dan pakej melalui WhatsApp.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="https://wa.me/60197205373" target="_blank" class="btn-primary">
-          WhatsApp: 019-720 5373
-        </a>
-        <a href="#gallery" class="btn-secondary">Lihat Gallery</a>
-      </div>
+      <a href="#contact">Tempah</a>
     </div>
+  </header>
 
-    <div class="hero-image">
-      <img src="assets/dewan1.jpg" alt="Mahligai Cinta Event Hall">
-    </div>
-  </div>
-</section>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="pill">Wedding • Tunang • Aqiqah • Corporate</p>
+          <h1>Mahligai Cinta<br/>Event Hall</h1>
 
+          <p class="lead">
+            Dewan eksklusif yang selesa dan kemas — sesuai untuk majlis impian anda.
+            Semak tarikh available, lawatan dewan, dan pakej melalui WhatsApp.
+          </p>
 
-<!-- ================= PAKEJ ================= -->
-<section id="pakej" class="section">
-  <div class="container">
-    <h2>Pakej & Kemudahan</h2>
+          <div class="cta">
+            <a class="btn" target="_blank"
+               href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej.">
+              WhatsApp: 019-720 5373
+            </a>
+            <a class="btn ghost" href="#gallery">Lihat Gallery</a>
+          </div>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Pakej Asas</h3>
-        <ul>
-          <li>Penggunaan dewan</li>
-          <li>Meja & kerusi tetamu</li>
-          <li>Susun atur kemas</li>
-        </ul>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-num">✨</div>
+              <div class="stat-text">Ruang premium & kemas</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">📸</div>
+              <div class="stat-text">Spot foto cantik</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">🗓️</div>
+              <div class="stat-text">Semak tarikh cepat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="assets/hero.jpg" alt="Mahligai Cinta Event Hall" />
+          <div class="hero-card-bottom">
+            <strong>Lawatan Dewan</strong>
+            <p>Set appointment • Fast response</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Pakej Wedding</h3>
-        <ul>
-          <li>Pelamin / Backdrop</li>
-          <li>Lighting & dekorasi</li>
-          <li>Koordinator majlis</li>
-        </ul>
+    <!-- PAKEJ -->
+    <section id="pakej" class="section">
+      <div class="container">
+        <h2>Pakej & Kemudahan</h2>
+        <p class="muted">
+          Ada pakej untuk pelbagai jenis majlis — wedding, tunang, aqiqah dan event korporat.
+          Untuk harga & detail penuh, WhatsApp kami terus.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Pakej Asas</h3>
+            <ul>
+              <li>Penggunaan dewan</li>
+              <li>Meja & kerusi tetamu</li>
+              <li>Susun atur kemas</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Pakej Wedding</h3>
+            <ul>
+              <li>Setup pelamin / backdrop (ikut pakej)</li>
+              <li>Lighting & dekorasi pilihan</li>
+              <li>Koordinator majlis (optional)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Pakej Corporate</h3>
+            <ul>
+              <li>Susun atur seminar / meeting</li>
+              <li>Ruang pendaftaran</li>
+              <li>PA system / skrin (optional)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn" target="_blank"
+             href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20boleh%20share%20senarai%20pakej%20dan%20harga%20ya.">
+            Minta Senarai Pakej
+          </a>
+          <a class="btn ghost" href="#contact">Tempah Tarikh</a>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Pakej Corporate</h3>
-        <ul>
-          <li>Seminar / Meeting</li>
-          <li>PA system</li>
-          <li>Projektor & skrin</li>
-        </ul>
+    <!-- GALLERY -->
+    <section id="gallery" class="section alt">
+      <div class="container">
+        <h2>Gallery</h2>
+        <p class="muted">
+          Suasana dewan, setup majlis, dan ruang yang selesa untuk tetamu.
+        </p>
+
+        <div class="gallery">
+          <img src="assets/gallery-1.jpg" alt="Suasana majlis di Mahligai Cinta" />
+          <img src="assets/gallery-2.jpg" alt="Dewan luas & selesa" />
+          <img src="assets/gallery-3.jpg" alt="Ruang makan tetamu" />
+          <img src="assets/gallery-4.jpg" alt="Lighting & ambiance dewan" />
+          <img src="assets/gallery-5.jpg" alt="Spot foto premium" />
+          <img src="assets/gallery-6.jpg" alt="Event & aktiviti" />
+        </div>
+
+        <div style="margin-top:16px;">
+          <a class="btn" target="_blank"
+             href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20set%20appointment%20lawatan%20dewan.">
+            Set Appointment Lawatan
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- LOKASI -->
+    <section id="lokasi" class="section">
+      <div class="container">
+        <h2>Lokasi</h2>
+        <p class="muted">Tekan map untuk navigasi terus ke Mahligai Cinta Event Hall.</p>
 
-<!-- ================= GALLERY ================= -->
-<section id="gallery" class="section light">
-  <div class="container">
-    <h2>Gallery</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Mahligai Cinta Event Hall</h3>
+            <p class="muted">
+              Untuk semak tarikh & pakej, WhatsApp kami. Fast response.
+            </p>
 
-    <div class="gallery-grid">
-      <img src="assets/dewan1.jpg">
-      <img src="assets/dewan2.jpg">
-      <img src="assets/dewan3.jpg">
-      <img src="assets/dewan4.jpg">
-      <img src="assets/dewan5.jpg">
-      <img src="assets/dewan6.jpg">
-    </div>
-  </div>
-</section>
+            <a class="btn" target="_blank"
+               href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej.">
+              WhatsApp 019-720 5373
+            </a>
 
+            <div class="spacer"></div>
 
-<!-- ================= LOKASI ================= -->
-<section id="lokasi" class="section">
-  <div class="container">
-    <h2>Lokasi</h2>
+            <p class="muted small">
+              Tip: Kalau Bro ada waktu operasi, letak dekat sini (contoh: 10am–6pm).
+            </p>
+          </div>
 
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.9729168681433!2d103.89444417496654!3d1.7427033982412243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da610052e0d177%3A0xcc070b1c2471a979!2sMahligai%20cinta%20event%20hall!5e0!3m2!1sen!2smy!4v1771752492919!5m2!1sen!2smy"
-      width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section light">
-  <div class="container">
-    <h2>Hantar Enquiry</h2>
-
-    <!-- NETLIFY FORM -->
-    <form name="enquiry" method="POST" data-netlify="true"
-          netlify-honeypot="bot-field"
-          action="/thanks.html">
-
-      <input type="hidden" name="form-name" value="enquiry" />
-
-      <p style="display:none;">
-        <label>Don’t fill this out:
-          <input name="bot-field" />
-        </label>
-      </p>
-
-      <div class="form-grid">
-        <input type="text" name="nama" placeholder="Nama" required>
-        <input type="tel" name="telefon" placeholder="No Telefon" required>
-        <input type="date" name="tarikh" required>
-        <textarea name="mesej" placeholder="Mesej"></textarea>
+          <div class="map card" style="padding:0; overflow:hidden;">
+            <!-- Responsive Google Maps embed -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.9729168681433!2d103.89444417496654!3d1.7427033982412243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da610052e0d177%3A0xcc070b1c2471a979!2sMahligai%20cinta%20event%20hall!5e0!3m2!1sen!2smy!4v1771752492919!5m2!1sen!2smy"
+              width="100%"
+              height="320"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <button type="submit" class="btn-primary">Hantar Enquiry</button>
-    </form>
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Tempahan / Enquiry</h2>
+        <p class="muted">Cara paling cepat: WhatsApp terus. Borang bawah untuk enquiry ringkas.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Hubungi Kami</h3>
+            <p class="muted">Klik dan terus mesej untuk semak tarikh available.</p>
+
+            <a class="btn" target="_blank"
+               href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej.">
+              WhatsApp 019-720 5373
+            </a>
+
+            <div class="spacer"></div>
+
+            <h3>Sosial</h3>
+            <p class="muted small">Isi link sebenar bila ready.</p>
+            <div class="links">
+              <a target="_blank" href="#">Instagram</a>
+              <a target="_blank" href="#">TikTok</a>
+              <a target="_blank" href="#">Facebook</a>
+            </div>
+          </div>
+
+          <!-- Netlify Form -->
+        <form class="card" id="enquiryForm" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+      action="/thanks.html">
+  <input type="hidden" name="form-name" value="enquiry" />
+  <p style="display:none;">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
+            <label>Nama
+              <input name="nama" required placeholder="Nama penuh" />
+            </label>
+
+            <label>No Telefon
+              <input name="telefon" required placeholder="01x-xxxxxxx" />
+            </label>
+
+            <label>Tarikh Majlis
+              <input type="date" name="tarikh" />
+            </label>
+
+            <label>Jenis Majlis
+              <input name="jenis" placeholder="Wedding / Tunang / Aqiqah / Corporate" />
+            </label>
+
+            <label>Mesej
+              <textarea name="mesej" rows="4" placeholder="Saya nak tanya pakej, kapasiti, dan tarikh..."></textarea>
+            </label>
+
+            <button class="btn" type="submit">Hantar Enquiry</button>
+            <p class="muted small">Enquiry akan masuk Netlify dashboard (Forms).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Mahligai Cinta Event Hall. All rights reserved.</p>
+      <a href="#top" class="muted">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej."
+     class="wa-float" target="_blank" aria-label="WhatsApp Mahligai Cinta">
+    <span class="wa-dot">●</span> WhatsApp
+  </a>
+<!-- Success Popup -->
+<div class="popup-backdrop" id="popupBackdrop" aria-hidden="true">
+  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-icon">✓</div>
+    <h3 id="popupTitle">Terima kasih!</h3>
+    <p>Enquiry anda dah diterima. Team kami akan hubungi anda secepat mungkin.</p>
+    <button class="btn ghost" type="button" id="popupClose">Tutup</button>
   </div>
-</section>
-
-
-<!-- ================= POPUP ================= -->
-<div id="popupBackdrop" class="popup-backdrop" aria-hidden="true">
-  <div class="popup">
-    <h3>Terima Kasih ❤️</h3>
-    <p>Enquiry anda telah diterima. Kami akan hubungi anda secepat mungkin.</p>
-    <button id="popupClose" class="btn-primary">Tutup</button>
-  </div>
-</div>
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container">
-    © <span id="year"></span> Mahligai Cinta Event Hall
-  </div>
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
+</div></body>
 </html>

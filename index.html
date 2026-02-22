@@ -9,11 +9,9 @@
   <meta name="keywords" content="Mahligai Cinta Event Hall, dewan kahwin, event hall, wedding hall, johor, tunang, aqiqah, korporat" />
   <meta name="author" content="Mahligai Cinta Event Hall" />
 
-  <!-- Social preview -->
   <meta property="og:title" content="Mahligai Cinta Event Hall" />
   <meta property="og:description" content="Dewan eksklusif untuk majlis perkahwinan, tunang, aqiqah & event korporat. WhatsApp 019-720 5373." />
   <meta property="og:type" content="website" />
-  <!-- Optional: kalau ada poster/hero khas untuk share, letak file contoh assets/og.jpg -->
   <!-- <meta property="og:image" content="https://mahligaicintaeventhall.com/assets/og.jpg" /> -->
 
   <link rel="stylesheet" href="style.css" />
@@ -27,14 +25,16 @@
         <span>Mahligai Cinta</span>
       </a>
 
-      <nav class="menu">
+      <nav class="menu" aria-label="Menu utama">
         <a href="#pakej">Pakej</a>
         <a href="#gallery">Gallery</a>
         <a href="#lokasi">Lokasi</a>
         <a href="#contact" class="btn">Tempah</a>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+      <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        ☰
+      </button>
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
@@ -59,7 +59,7 @@
           </p>
 
           <div class="cta">
-            <a class="btn" target="_blank"
+            <a class="btn" target="_blank" rel="noopener"
                href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej.">
               WhatsApp: 019-720 5373
             </a>
@@ -130,8 +130,8 @@
           </div>
         </div>
 
-        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="btn" target="_blank"
+        <div class="btn-row">
+          <a class="btn" target="_blank" rel="noopener"
              href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20boleh%20share%20senarai%20pakej%20dan%20harga%20ya.">
             Minta Senarai Pakej
           </a>
@@ -144,9 +144,7 @@
     <section id="gallery" class="section alt">
       <div class="container">
         <h2>Gallery</h2>
-        <p class="muted">
-          Suasana dewan, setup majlis, dan ruang yang selesa untuk tetamu.
-        </p>
+        <p class="muted">Suasana dewan, setup majlis, dan ruang yang selesa untuk tetamu.</p>
 
         <div class="gallery">
           <img src="assets/gallery-1.jpg" alt="Suasana majlis di Mahligai Cinta" />
@@ -157,8 +155,8 @@
           <img src="assets/gallery-6.jpg" alt="Event & aktiviti" />
         </div>
 
-        <div style="margin-top:16px;">
-          <a class="btn" target="_blank"
+        <div class="btn-row">
+          <a class="btn" target="_blank" rel="noopener"
              href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20set%20appointment%20lawatan%20dewan.">
             Set Appointment Lawatan
           </a>
@@ -175,32 +173,23 @@
         <div class="grid-2">
           <div class="card">
             <h3>Mahligai Cinta Event Hall</h3>
-            <p class="muted">
-              Untuk semak tarikh & pakej, WhatsApp kami. Fast response.
-            </p>
+            <p class="muted">Untuk semak tarikh & pakej, WhatsApp kami. Fast response.</p>
 
-            <a class="btn" target="_blank"
+            <a class="btn" target="_blank" rel="noopener"
                href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej.">
               WhatsApp 019-720 5373
             </a>
 
             <div class="spacer"></div>
-
-            <p class="muted small">
-              Tip: Kalau Bro ada waktu operasi, letak dekat sini (contoh: 10am–6pm).
-            </p>
+            <p class="muted small">Tip: Kalau Bro ada waktu operasi, letak dekat sini (contoh: 10am–6pm).</p>
           </div>
 
           <div class="map card" style="padding:0; overflow:hidden;">
-            <!-- Responsive Google Maps embed -->
             <iframe
+              title="Lokasi Mahligai Cinta Event Hall"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.9729168681433!2d103.89444417496654!3d1.7427033982412243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da610052e0d177%3A0xcc070b1c2471a979!2sMahligai%20cinta%20event%20hall!5e0!3m2!1sen!2smy!4v1771752492919!5m2!1sen!2smy"
-              width="100%"
-              height="320"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
+              width="100%" height="320" style="border:0;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
         </div>
@@ -218,7 +207,7 @@
             <h3>Hubungi Kami</h3>
             <p class="muted">Klik dan terus mesej untuk semak tarikh available.</p>
 
-            <a class="btn" target="_blank"
+            <a class="btn" target="_blank" rel="noopener"
                href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej.">
               WhatsApp 019-720 5373
             </a>
@@ -228,26 +217,34 @@
             <h3>Sosial</h3>
             <p class="muted small">Isi link sebenar bila ready.</p>
             <div class="links">
-              <a target="_blank" href="#">Instagram</a>
-              <a target="_blank" href="#">TikTok</a>
-              <a target="_blank" href="#">Facebook</a>
+              <a target="_blank" rel="noopener" href="#">Instagram</a>
+              <a target="_blank" rel="noopener" href="#">TikTok</a>
+              <a target="_blank" rel="noopener" href="#">Facebook</a>
             </div>
           </div>
 
           <!-- Netlify Form -->
-        <form class="card" id="enquiryForm" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-      action="/thanks.html">
-  <input type="hidden" name="form-name" value="enquiry" />
-  <p style="display:none;">
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+          <form class="card"
+                id="enquiryForm"
+                name="enquiry"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/thanks.html">
+            <input type="hidden" name="form-name" value="enquiry" />
+            <p style="display:none;">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
 
             <label>Nama
-              <input name="nama" required placeholder="Nama penuh" />
+              <input name="nama" required autocomplete="name" placeholder="Nama penuh" />
             </label>
 
             <label>No Telefon
-              <input name="telefon" required placeholder="01x-xxxxxxx" />
+              <input type="tel" name="telefon" required autocomplete="tel"
+                     placeholder="01x-xxxxxxx"
+                     pattern="^(\+?6?0)?1[0-9]{1}-?[0-9]{7,8}$"
+                     title="Contoh: 019-7205373" />
             </label>
 
             <label>Tarikh Majlis
@@ -277,20 +274,22 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/60197205373?text=Hi%20Mahligai%20Cinta%20Event%20Hall,%20saya%20nak%20tanya%20tarikh%20available%20dan%20pakej."
-     class="wa-float" target="_blank" aria-label="WhatsApp Mahligai Cinta">
+     class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Mahligai Cinta">
     <span class="wa-dot">●</span> WhatsApp
   </a>
-<!-- Success Popup -->
-<div class="popup-backdrop" id="popupBackdrop" aria-hidden="true">
-  <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-    <div class="popup-icon">✓</div>
-    <h3 id="popupTitle">Terima kasih!</h3>
-    <p>Enquiry anda dah diterima. Team kami akan hubungi anda secepat mungkin.</p>
-    <button class="btn ghost" type="button" id="popupClose">Tutup</button>
+
+  <!-- Success Popup (boleh trigger dari thanks.html atau querystring) -->
+  <div class="popup-backdrop" id="popupBackdrop" aria-hidden="true">
+    <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-icon">✓</div>
+      <h3 id="popupTitle">Terima kasih!</h3>
+      <p>Enquiry anda dah diterima. Team kami akan hubungi anda secepat mungkin.</p>
+      <button class="btn ghost" type="button" id="popupClose">Tutup</button>
+    </div>
   </div>
-</div></body>
+
+  <script src="script.js"></script>
+</body>
 </html>

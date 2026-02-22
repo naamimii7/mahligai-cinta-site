@@ -1,5 +1,38 @@
-// ===== Netlify Form + Popup =====
-const form = document.getElementById("enquiryForm");
+// ================================
+// Mahligai Cinta - script.js (FULL)
+// Netlify Forms (no fetch) + Success Popup
+// ================================
+
+// Mobile menu toggle
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.contains("open");
+    if (isOpen) {
+      mobileMenu.classList.remove("open");
+      mobileMenu.style.display = "none";
+    } else {
+      mobileMenu.classList.add("open");
+      mobileMenu.style.display = "block";
+    }
+  });
+
+  // Auto close when click any link in mobile menu
+  mobileMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      mobileMenu.style.display = "none";
+    });
+  });
+}
+
+// Footer year
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ===== Popup controls =====
 const popupBackdrop = document.getElementById("popupBackdrop");
 const popupClose = document.getElementById("popupClose");
 
@@ -22,35 +55,16 @@ if (popupBackdrop) {
   });
 }
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+// ===== Show popup after Netlify redirect (?success=true) =====
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("success") === "true") {
+    showPopup();
+    setTimeout(hidePopup, 4000);
 
-    try {
-      const formData = new FormData(form);
-
-      // Encode
-      const params = new URLSearchParams();
-      for (const [key, value] of formData.entries()) params.append(key, value);
-
-      const res = await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        },
-        body: params.toString(),
-      });
-
-      // Netlify kadang return 200/201/302 — kita anggap semua OK kecuali 4xx/5xx
-      if (res.status >= 200 && res.status < 400) {
-        form.reset();
-        showPopup();
-        setTimeout(hidePopup, 4000);
-      } else {
-        alert("Oops! Enquiry gagal dihantar. Cuba lagi ya.");
-      }
-    } catch (err) {
-      alert("Network error. Cuba lagi ya.");
-    }
-  });
-}
+    // Clean URL (remove success param, keep hash)
+    const url = new URL(window.location.href);
+    url.searchParams.delete("success");
+    window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+  }
+})();
